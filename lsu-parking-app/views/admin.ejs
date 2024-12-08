@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <form action="/parking/add" method="POST">
+        <input type="text" name="name" placeholder="Lot Name" required>
+        <input type="text" name="lotNumber" placeholder="Lot Number" required>
+        <input type="number" name="totalSpaces" placeholder="Total Spaces" required>
+        <input type="number" name="availability7am" placeholder="7:00 AM Availability (%)" required>
+        <input type="number" name="availability11am" placeholder="11:00 AM Availability (%)" required>
+        <input type="number" name="availability2pm" placeholder="2:00 PM Availability (%)" required>
+        <input type="number" name="availability4pm" placeholder="4:00 PM Availability (%)" required>
+        <button type="submit">Add Parking Lot</button>
+    </form>
+</body>
+</html>

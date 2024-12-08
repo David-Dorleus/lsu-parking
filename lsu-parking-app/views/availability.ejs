@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Parking Availability</title>
+</head>
+<body>
+    <h1>Parking Lot Availability</h1>
+    <table border="1">
+        <tr>
+            <th>Lot Name</th>
+            <th>Lot Number</th>
+            <th>Total Spaces</th>
+            <th>7:00 AM</th>
+            <th>11:00 AM</th>
+            <th>2:00 PM</th>
+            <th>4:00 PM</th>
+        </tr>
+        <% lots.forEach(lot => { %>
+            <tr>
+                <td><%= lot.name %></td>
+                <td><%= lot.lotNumber %></td>
+                <td><%= lot.totalSpaces %></td>
+                <td><%= lot.availability['7am'] %>%</td>
+                <td><%= lot.availability['11am'] %>%</td>
+                <td><%= lot.availability['2pm'] %>%</td>
+                <td><%= lot.availability['4pm'] %>%</td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
